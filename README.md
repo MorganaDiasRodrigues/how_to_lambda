@@ -1,6 +1,6 @@
 ## Using Localstack Lambda
 
-``
+```
 awslocal lambda create-function \
     --function-name create-embedding-lambda \
     --runtime python3.9 \
@@ -12,7 +12,7 @@ awslocal lambda invoke \
     --function-name create-embedding-lambda \
     --payload '{"company": {"name": "Empresa X", "description": "Uma empresa focada em tecnologia de ponta."}}' output.txt
 
-``
+```
 
 ## Using python
 
