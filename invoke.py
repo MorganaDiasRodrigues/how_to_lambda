@@ -1,14 +1,15 @@
-import boto3
+import localstack_client.session as boto3
+from localstack_client.patch import enable_local_endpoints
+enable_local_endpoints()
 import json
 
 # Configurações para conectar no LocalStack
 lambda_client = boto3.client(
     'lambda',
-    region_name='us-east-1',
-    endpoint_url='http://localhost:4566'  # Endpoint do LocalStack
+    region_name='us-east-1'
 )
 
-def invoke_lambda_and_get_embedding():
+def invoke_lambda_and_get_embedding(): 
     # Payload para enviar à Lambda
     payload = {
         "company": {

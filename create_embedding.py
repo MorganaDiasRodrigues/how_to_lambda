@@ -40,3 +40,15 @@ def lambda_handler(event, context):
             'statusCode': 400,
             'body': json.dumps({'error': str(e)})
         }
+
+
+# Teste local
+if __name__ == "__main__":
+    test_event = {
+        "company": {
+            "name": "Empresa X",
+            "description": "Uma empresa focada em tecnologia de ponta."
+        }
+    }
+    response = lambda_handler(test_event, None)
+    print(response)

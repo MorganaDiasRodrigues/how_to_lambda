@@ -1,0 +1,22 @@
+# Ignorar pastas comuns de dependências
+__pycache__/
+bin/
+boto3/
+botocore/
+dateutil/
+jmespath/
+localstack_client/
+s3transfer/
+urllib3/
+*.dist-info/
+
+# Ignorar arquivos ZIP e binários específicos
+*.zip
+*.pyc
+
+# Ignorar qualquer coisa que não seja parte do código original
+output.txt
+
+# Se você quiser ignorar todas as pastas geradas automaticamente, pode ser mais genérico:
+*.dist-info/
+*.egg-info/
